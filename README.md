@@ -40,4 +40,25 @@ Welcome to mongo-express
 (node:7) [MONGODB DRIVER] Warning: Current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
 Mongo Express server listening at http://0.0.0.0:8081
 
+$kubectl get service
+NAME                    TYPE           CLUSTER-IP      EXTERNAL-IP   PORT(S)          AGE
+kubernetes              ClusterIP      10.96.0.1       <none>        443/TCP          9d
+mongo-express-service   LoadBalancer   10.110.54.150   <pending>     8081:30000/TCP   11m
+mongodb-service         ClusterIP      10.101.45.248   <none>        27017/TCP        21m
 
+
+$minikube service mongo-express-service  
+|-----------|-----------------------|-------------|---------------------------|
+| NAMESPACE |         NAME          | TARGET PORT |            URL            |
+|-----------|-----------------------|-------------|---------------------------|
+| default   | mongo-express-service |        8081 | http://192.168.49.2:30000 |
+|-----------|-----------------------|-------------|---------------------------|
+🏃  Starting tunnel for service mongo-express-service.
+|-----------|-----------------------|-------------|------------------------|
+| NAMESPACE |         NAME          | TARGET PORT |          URL           |
+|-----------|-----------------------|-------------|------------------------|
+| default   | mongo-express-service |             | http://127.0.0.1:58793 |
+|-----------|-----------------------|-------------|------------------------|
+🎉  Opening service default/mongo-express-service in default browser...
+❗  Because you are using a Docker driver on darwin, the terminal needs to be open to run it
+This will open up your mongoexpress UI application in your browser.
