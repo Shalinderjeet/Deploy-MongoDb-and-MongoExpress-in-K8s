@@ -9,3 +9,4 @@ Use $echo -n 'username' | base64 and $echo -n 'password' | base64 values in mong
 Run $kubectl apply -f mongo-secret.yaml
 Refer the created secret values in mongo-secret.yaml deployment/pod file.
 
+Create an Internal service for Mongodb deployment so that the other components can talk to this Mongodb.
