@@ -20,3 +20,15 @@ $kubectl apply -f mongo.yaml
 deployment.apps/mongodb-deployment created
 service/mongodb-service created
 
+Create mongo-configmap.yaml file for Configmap holding the mongodb URL pointing to mongo-service (Internal)
+
+$kubectl create -f mongo-configmap.yaml
+configmap/mongodb-configmap created
+
+Now, create mongo-express.yaml file for Mongo-express deployment/pod listening on port 8081
+Also, create mongo-express service in the same yaml file
+
+$kubectl apply -f mongo-express.yaml
+deployment.apps/mongo-express created
+service/mongo-express-service created
+
