@@ -32,3 +32,12 @@ $kubectl apply -f mongo-express.yaml
 deployment.apps/mongo-express created
 service/mongo-express-service created
 
+$kubectl logs mongo-express-98c6ff4b4-vss82
+Welcome to mongo-express
+------------------------
+
+
+(node:7) [MONGODB DRIVER] Warning: Current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+Mongo Express server listening at http://0.0.0.0:8081
+
+
