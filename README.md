@@ -10,3 +10,5 @@ Run $kubectl apply -f mongo-secret.yaml
 Refer the created secret values in mongo-secret.yaml deployment/pod file.
 
 Create an Internal service for Mongodb deployment so that the other components can talk to this Mongodb.
+Deployment and Mongodb service -put their configuration in the same file.
+
