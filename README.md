@@ -1,7 +1,9 @@
 # Kubernetes
 
 
-Run the Mongodb database container with MongoExpress in Kubernetes minikube cluster
+Deploy MongoDB and MongoExpress into localK8s(Minikube).
+Setup local K8s cluster with Minikube
+Deploy MongoDB and MongoExpressconfiguration and credentials extracted into ConfigMap and Secret.
 
 Create a basic template of a deployment of mongo database with a mongo image listening on port 27017.
 Create a file name mongo-secret.yaml with a secret type Opaque.
