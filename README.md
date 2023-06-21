@@ -50,6 +50,7 @@ service/mongo-express-service created
 
 $kubectl logs mongo-express-98c6ff4b4-vss82
 Welcome to mongo-express
+
 ------------------------
 
 
