@@ -22,6 +22,8 @@ Run $kubectl apply -f mongo-secret.yaml
 Refer to the created secret values in mongo-secret.yaml deployment/pod file.
 
 Create an Internal service for Mongodb deployment so that the other components can talk to this Mongodb.
+port=Service Port
+targetport=Container Port
 
 Deployment and Mongodb service -put their configuration in the same file.
 
@@ -30,6 +32,7 @@ $kubectl apply -f mongo.yaml
 deployment.apps/mongodb-deployment created
 service/mongodb-service created
 
+--------------------------------------------------------------------------------------------
 Create mongo-configmap.yaml file for Configmap holding the mongodb URL pointing to mongo-service (Internal)
 
 $kubectl create -f mongo-configmap.yaml
