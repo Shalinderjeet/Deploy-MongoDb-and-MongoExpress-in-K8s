@@ -5,7 +5,7 @@ Description:- Setup local K8s cluster with Minikube
 
 Deploy MongoDB and MongoExpressconfiguration and credentials extracted into ConfigMap and Secret.
 
-Details:-
+Details:- See Image p1 in repository
 
 Create a basic template for the deployment of a Mongo database with a Mongo image listening on port 27017.
 Create a file name mongo-secret.yaml with a secret type Opaque. 
@@ -79,3 +79,5 @@ $minikube service mongo-express-service
 🎉  Opening service default/mongo-express-service in default browser...
 ❗  Because you are using a Docker driver on darwin, the terminal needs to be open to run it
 This will open up your mongoexpress UI application in your browser.
+
+Check image p2 in the repository
