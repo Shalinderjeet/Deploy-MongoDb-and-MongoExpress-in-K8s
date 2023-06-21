@@ -32,6 +32,9 @@ $kubectl apply -f mongo.yaml
 deployment.apps/mongodb-deployment created
 service/mongodb-service created
 
+$kubectl describe service mongodb-service
+check for endpoints-->It will have IP address of your underlying pod
+
 --------------------------------------------------------------------------------------------
 Create mongo-configmap.yaml file for Configmap holding the mongodb URL pointing to mongo-service (Internal)
 
