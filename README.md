@@ -1,24 +1,31 @@
 # Deploy MongoDB and MongoExpress into localK8s(Minikube).
 
 Description:- Setup local K8s cluster with Minikube
+
 Deploy MongoDB and MongoExpressconfiguration and credentials extracted into ConfigMap and Secret.
 
 Details:-
 
-Create a basic template of a deployment of mongo database with a mongo image listening on port 27017.
-Create a file name mongo-secret.yaml with a secret type Opaque.
-Use $echo -n 'username' | base64 and $echo -n 'password' | base64 values in mongo-secret.yaml file
+Create a basic template for the deployment of a Mongo database with a Mongo image listening on port 27017.
+Create a file name mongo-secret.yaml with a secret type Opaque. 
+
+Use $echo -n 'username' | base64 and
+
+$echo -n 'password' | base64 values in mongo-secret.yaml file
+
 Run $kubectl apply -f mongo-secret.yaml
 
  $kubectl apply -f mongo-secret.yaml
  secret/mongodb-secret created
 
-Refer the created secret values in mongo-secret.yaml deployment/pod file.
+Refer to the created secret values in mongo-secret.yaml deployment/pod file.
 
 Create an Internal service for Mongodb deployment so that the other components can talk to this Mongodb.
+
 Deployment and Mongodb service -put their configuration in the same file.
 
 $kubectl apply -f mongo.yaml
+
 deployment.apps/mongodb-deployment created
 service/mongodb-service created
 
