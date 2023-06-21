@@ -5,6 +5,8 @@ Description:- Setup local K8s cluster with Minikube
 
 Deploy MongoDB and MongoExpressconfiguration and credentials extracted into ConfigMap and Secret.
 
+K8s resources used:- 2 Deployments, 2 Services, 1 secret and 1 configmap.
+
 Details:- See Image p1 in repository
 
 Create a basic template for the deployment of a Mongo database with a Mongo image listening on port 27017.
